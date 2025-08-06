@@ -12,12 +12,13 @@
     </header>
     <main>
         <?php 
-        
-            $nome = $_GET["nome"];
-            $sobren = $_GET["sobrenome"];
+            // Verifica se os parâmetros foram passados com GET
+            $nome = $_GET["nome"] ?? "Nome não informado"; // Usa ?? para definir um valor padrão
+            $sobren = $_GET["sobrenome"] ?? "Sobrenome não informado"; 
             echo "Seja bem-vindo, $nome $sobren!<br>";
 
         ?>
-    </main>
+        <p><a href="index.html">Voltar a página anterior</a></p>
+</main>
 </body>
 </html>
